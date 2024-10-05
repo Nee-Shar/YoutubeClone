@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Backend course from chai and code youtube",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "JS",
@@ -12,5 +13,8 @@
     "YOUTUBE"
   ],
   "author": "Nee-Shar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }

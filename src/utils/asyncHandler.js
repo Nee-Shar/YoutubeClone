@@ -1,16 +1,13 @@
-const asyncHandler=(reqesuetHandler)=>{
-  (req,res,next)=>{
-    Promise.resolve(reqesuetHandler(req,res,next)).catch(next);
-  }
-    
-
-}
+const asyncHandler = (reqesuetHandler) => {
+  return (req, res, next) => {
+    Promise.resolve(reqesuetHandler(req, res, next)).catch(next);
+  };
+};
 
 export default asyncHandler;
 
-
-// Higher order function is a funtion thath takes 
-// another function as an argument or returns a function 
+// Higher order function is a funtion thath takes
+// another function as an argument or returns a function
 // as a result
 
 // function salary(num){
@@ -18,7 +15,6 @@ export default asyncHandler;
 // }
 
 // setTimeout(salary,300) //it is high order function since it takes salary fun as input
-
 
 // const mySalaries=[50,60,70,80,90,100];
 

@@ -24,4 +24,14 @@ app.use(
 app.use(express.static("public"));
 app.use(cookieParser());
 
+//routes
+
+import userRouter from "./routes/user.routes.js";
+
+//routes declarations
+app.use("/api/v1/users", userRouter);
+//all users routes are redirected to userRouter
+// and userRouter will decide and handle whether its
+// /users/login or /users/logout etc not app.js
+
 export default app;

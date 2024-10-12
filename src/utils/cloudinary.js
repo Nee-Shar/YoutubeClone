@@ -8,7 +8,7 @@ cloudinary.config({
   api_secret: process.env.CLOUD_API_SECRET,
 });
 
-const uploadOnCloud = async (localFilePath) => {
+export const uploadOnCloud = async (localFilePath) => {
   try {
     if (!localFilePath) return null;
 
@@ -17,12 +17,11 @@ const uploadOnCloud = async (localFilePath) => {
       resource_type: "auto",
     });
     //file uploaded success delete from server
-    console.log("File uploaded successfully", response.url);
+    // console.log("File uploaded successfully", response.url);
+    fs.unlinkSync(localFilePath);
     return response;
   } catch (e) {
     fs.unlinkSync(localFilePath); //delete file from server if
     // upload fails
   }
 };
-
-export default uploadOnCloud;

@@ -7,7 +7,7 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: true,
-      unique: trur,
+      unique: true,
       lowercase: true,
       trim: true,
       index: true, // make searchig faster
@@ -31,6 +31,8 @@ const userSchema = new Schema(
     },
     coverImage: {
       type: String,
+      default:
+        "https://static-cse.canva.com/blob/1145215/1.magebyRodionKutsaevviaUnsplash.jpg",
     },
     watchHistory: [
       {

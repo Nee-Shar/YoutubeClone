@@ -4,7 +4,7 @@ const asyncHandler = (reqesuetHandler) => {
   };
 };
 
-export default asyncHandler;
+export { asyncHandler };
 
 // Higher order function is a funtion thath takes
 // another function as an argument or returns a function
